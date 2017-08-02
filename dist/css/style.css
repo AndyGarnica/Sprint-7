@@ -1,21 +1,14 @@
 body {
   color: #848485; }
-
-nav {
-  background-color: #ffffff; }
-
-nav ul {
-  color: #000000;
-  padding: 0 15px; }
-
-nav.button-collapse {
-  color: #2307DA; }
+  body nav {
+    background-color: #ffffff; }
+    body nav ul {
+      color: black; }
+      body nav ul li a {
+        color: black; }
 
 nav.nav-wrapper {
   margin: 10px 40px 40px; }
-
-nav .nav-wrapper ul i {
-  color: #2307DA; }
 
 div.iconos i {
   color: #BFBFC1;
@@ -23,3 +16,9 @@ div.iconos i {
 
 div.iconos {
   padding: 40px 40px 0; }
+
+.responsive-img {
+  display: relative; }
+
+.footer-img {
+  display: block; }
