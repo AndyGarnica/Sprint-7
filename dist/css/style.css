@@ -1,4 +1,25 @@
-* {
-  background: red; }
+body {
+  color: #848485; }
 
-/*# sourceMappingURL=style.css.map */
+nav {
+  background-color: #ffffff; }
+
+nav ul a {
+  color: #000000;
+  padding: 0 15px; }
+
+nav.button-collapse {
+  color: #2307DA; }
+
+nav.nav-wrapper {
+  margin: 10px 40px 40px; }
+
+nav .nav-wrapper ul i {
+  color: #2307DA; }
+
+div.iconos i {
+  color: #BFBFC1;
+  margin-left: 30px; }
+
+div.iconos {
+  padding: 40px 40px 0; }

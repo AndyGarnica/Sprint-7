@@ -5,134 +5,98 @@ html
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title Proyecto final
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css")
-    link(rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="../dist/css/style.css")
+
+  
   
   body
-  
     .container
       .row
-        .col-sm-12.overflow
-          .social-icons.pull-right
-            ul.nav.nav-pills
-              li                  
-                a
-                  i(aria-hidden="true").fa.fa-facebook.fa-lg
-              li
-                a
-                  i(aria-hidden="true").fa.fa-twitter.fa-lg
-              li
-                a
-                  i(aria-hidden="true").fa.fa-google-plus.fa-lg
-              li
-                a
-                  i(aria-hidden="true").fa.fa-dribbble.fa-lg
-              li
-                a
-                  i(aria-hidden="true").fa.fa-linkedin.fa-lg
-      
-    
-      nav.lighten-3
-        div.container
-          .nav-wrapper
-            a.left.align.brand-logo.hide-on-med-only.hide-on-small-only(href="#")
-              i.logo.text-black logo
-              
-  ul.right.hide-on-med-and-down
-    li
-      a.home(href"home.html") HOME
-    li
-      a.pages(href"pages.html") PAGES
-    li
-      a.blog(href"blog.html") BLOG
-    li
-      a.portfolio(href"portfolio") PORTFOLIO
-    li
-      a.shortcodes(href"shortcodes") SHORTCODES
-                   
-                   //- CONTENIDO
-      footer
+        .right-align.iconos
+          i.circle.fa.fa-facebook.fa-lg.redes(aria-hidden="true")
+          i.circle.fa.fa-twitter.fa-lg.redes(aria-hidden="true")
+          i.circle.fa.fa-google-plus.fa-lg.redes(aria-hidden="true")
+          i.circle.fa.fa-dribbble.fa-lg.redes(aria-hidden="true")
+          i.circle.fa.fa-instagram.fa-lg.redes(aria-hidden="true")
+
+      nav.row
+        div
+          img.brand-logo.responsive-img(src="../dist/images/logo.png")
+          a.button-collapse(href="#" data-activates="mobile-demo"): i.material-icons view_headline
+          ul.right.hide-on-med-and-down
+            li
+              a(href="../dist/about.html" data-activates="dropdown1") PAGES
+            li
+              a(href="../dist/blog.html" data-activates="dropdown1") BLOG
+            li
+              a(href="../dist/portafolio.html" data-activates="dropdown1") PORTFOLIO
+            li
+              a(href="../dist/creative.html") SHORTCODES
+            li
+              i.fa.fa-search(aria-hidden="true")
+
+    block main
+
+    footer
+      .row
+        .col.s8.offset-s2.col.l8.offset-l2.footer--margen
+          img.responsive-img(src="../dist/images/home/under.png")
+
+      .row.fondo-footer
+        .col.s5.col.l5
+          h5.center-align Testimonial
+          .row
+            .col.s3.offset-s2.col.l3.offset-l2
+              img.responsive-img(src="../dist/images/home/profile1.png")
+            .col.s6.col.l6
+              blockquote
+                p Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.                footer.right-align - María Álvarez
+          .row
+            .col.s3.offset-s2.col.l3.offset-l2
+              img.responsive-img(src="../dist/images/home/profile2.png")
+            .col.s6.col.l6
+              blockquote
+                p Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.                footer.right-align - María Álvarez
+
+        .col.s2.col.l2
+          mixin lista(titulo,dato, email, phone, fax, segundoDato )
+            h5 #{titulo}
+            ul
+              li: small #{dato}
+                a #{email}
+              li: small #{phone}
+              li: small #{fax}
+              li: small #{segundoDato}
+        
+          .row
+            +lista( "Contact","Email:", "email@email.com", "Phone: +1(123)456 7890", "Fax: +1(123)456 7890", "")
+
+          .row
+            +lista("Address","Unit C2,St.Vincent´s Trading Est.,","", "Fooder Road", "Bistrol,BS2 OUY", "United Kingdom")
+        
         .container
           .row
-            .col-sm-12.text-center.bottom-separator
-              //- img(src="images/home/under.png")
-                  //-  <footer id="footer">
-                  //-      <div class="container">
-                  //-          <div class="row">
-                  //-              <div class="col-sm-12 text-center bottom-separator">
-                  //-                  <img src="images/home/under.png" class="img-responsive inline" alt="">
-                  //-              </div>
-                  //-              <div class="col-md-4 col-sm-6">
-                  //-                  <div class="testimonial bottom">
-                  //-                      <h2>Testimonial</h2>
-                  //-                      <div class="media">
-                  //-                          <div class="pull-left">
-                  //-                              <a href="#"><img src="images/home/profile1.png" alt=""></a>
-                  //-                          </div>
-                  //-                          <div class="media-body">
-                  //-                              <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-                  //-                              <h3><a href="#">- Jhon Kalis</a></h3>
-                  //-                          </div>
-                  //-                       </div>
-                  //-                      <div class="media">
-                  //-                          <div class="pull-left">
-                  //-                              <a href="#"><img src="images/home/profile2.png" alt=""></a>
-                  //-                          </div>
-                  //-                          <div class="media-body">
-                  //-                              <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-                  //-                              <h3><a href="">- Abraham Josef</a></h3>
-                  //-                          </div>
-                  //-                      </div>   
-                  //-                  </div> 
-                  //-              </div>
-                  //-              <div class="col-md-3 col-sm-6">
-                  //-                  <div class="contact-info bottom">
-                  //-                      <h2>Contacts</h2>
-                  //-                      <address>
-                  //-                      E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br> 
-                  //-                      Phone: +1 (123) 456 7890 <br> 
-                  //-                      Fax: +1 (123) 456 7891 <br> 
-                  //-                      </address>
-                   //- 
-                  //-                      <h2>Address</h2>
-                  //-                      <address>
-                  //-                      Unit C2, St.Vincent's Trading Est., <br> 
-                  //-                      Feeder Road, <br> 
-                  //-                      Bristol, BS2 0UY <br> 
-                  //-                      United Kingdom <br> 
-                  //-                      </address>
-                  //-                  </div>
-                  //-              </div>
-                  //-              <div class="col-md-4 col-sm-12">
-                  //-                  <div class="contact-form bottom">
-                  //-                      <h2>Send a message</h2>
-                  //-                      <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                  //-                          <div class="form-group">
-                  //-                              <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-                  //-                          </div>
-                  //-                          <div class="form-group">
-                  //-                              <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
-                  //-                          </div>
-                  //-                          <div class="form-group">
-                  //-                              <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
-                  //-                          </div>                        
-                  //-                          <div class="form-group">
-                  //-                              <input type="submit" name="submit" class="btn btn-submit" value="Submit">
-                  //-                          </div>
-                  //-                      </form>
-                  //-                  </div>
-                  //-              </div>
-                  //-              <div class="col-sm-12">
-                  //-                  <div class="copyright-text text-center">
-                  //-                      <p>&copy; Your Company 2014. All Rights Reserved.</p>
-                  //-                      <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
-                  //-                  </div>
-                  //-              </div>
-                  //-          </div>
-                  //-      </div>
-                  //-  </footer>
+            .col.l4.col.s4
+              h5 Send and Message
+              form.formulario(method="POST" action="formulario-contacto.php")
+                div.input-field
+                  label(for="nombre") Nombre
+                  input(type="text" name="nombre" required)
 
-    
-    script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js")
+                div.input-field
+                  label(for="email") Email
+                  input(type="email" name="email" required)
+
+                div.input-field
+                  label(for="mensaje") Mensaje
+                  textarea.materialize-textarea(name="mensaje" rows="10" length="140" required)
+
+                div
+                  button.center-align.waves-effect.waves-light.btn#boton-formulario(type="submit") submit
+
+    script(type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js")
+    script(type="text/javascript", src="../node_modules/handlebars/dist/handlebars.min.js")

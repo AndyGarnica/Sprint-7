@@ -5,48 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Proyecto final</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/style.css">
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 overflow">
-          <div class="social-icons pull-right">
-            <ul class="nav nav-pills">
-              <li>                 <a><i aria-hidden="true" class="fa fa-facebook fa-lg"></i></a></li>
-              <li><a><i aria-hidden="true" class="fa fa-twitter fa-lg"></i></a></li>
-              <li><a><i aria-hidden="true" class="fa fa-google-plus fa-lg"></i></a></li>
-              <li><a><i aria-hidden="true" class="fa fa-dribbble fa-lg"></i></a></li>
-              <li><a><i aria-hidden="true" class="fa fa-linkedin fa-lg"></i></a></li>
-            </ul>
-          </div>
-        </div>
+        <div class="right-align iconos"><i aria-hidden="true" class="circle fa fa-facebook fa-lg redes"></i><i aria-hidden="true" class="circle fa fa-twitter fa-lg redes"></i><i aria-hidden="true" class="circle fa fa-google-plus fa-lg redes"></i><i aria-hidden="true" class="circle fa fa-dribbble fa-lg redes"></i><i aria-hidden="true" class="circle fa fa-instagram fa-lg redes"></i></div>
       </div>
-      <nav class="lighten-3">
-        <div class="container">
-          <div class="nav-wrapper"><a href="#" class="left align brand-logo hide-on-med-only hide-on-small-only"><i class="logo text-black">logo</i></a></div>
+      <nav class="row">
+        <div><img src="../dist/images/logo.png" class="brand-logo responsive-img"><a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">view_headline</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../dist/about.html" data-activates="dropdown1">PAGES</a></li>
+            <li><a href="../dist/blog.html" data-activates="dropdown1">BLOG</a></li>
+            <li><a href="../dist/portafolio.html" data-activates="dropdown1">PORTFOLIO</a></li>
+            <li><a href="../dist/creative.html">SHORTCODES</a></li>
+            <li><i aria-hidden="true" class="fa fa-search"></i></li>
+          </ul>
         </div>
       </nav>
     </div>
-  </body>
-  <ul class="right hide-on-med-and-down">
-    <li><a href"home.html class="home">HOME</a></li>
-    <li><a href"pages.html class="pages">PAGES</a></li>
-    <li><a href"blog.html class="blog">BLOG</a></li>
-    <li><a href"portfolio class="portfolio">PORTFOLIO</a></li>
-    <li><a href"shortcodes class="shortcodes">SHORTCODES</a>
-      <footer>
-        <div class="container">
+    <footer>
+      <div class="row">
+        <div class="col s8 offset-s2 col l8 offset-l2 footer--margen"><img src="../dist/images/home/under.png" class="responsive-img"></div>
+      </div>
+      <div class="row fondo-footer">
+        <div class="col s5 col l5">
+          <h5 class="center-align">Testimonial</h5>
           <div class="row">
-            <div class="col-sm-12 text-center bottom-separator">
+            <div class="col s3 offset-s2 col l3 offset-l2"><img src="../dist/images/home/profile1.png" class="responsive-img"></div>
+            <div class="col s6 col l6">
+              <blockquote>
+                <p>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.                footer.right-align - María Álvarez</p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s3 offset-s2 col l3 offset-l2"><img src="../dist/images/home/profile2.png" class="responsive-img"></div>
+            <div class="col s6 col l6">
+              <blockquote>
+                <p>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.                footer.right-align - María Álvarez</p>
+              </blockquote>
             </div>
           </div>
         </div>
-      </footer>
-    </li>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  </ul>
+        <div class="col s2 col l2">
+          <div class="row">
+                      <h5>Contact</h5>
+                      <ul>
+                        <li><small>Email:<a>email@email.com</a></small></li>
+                        <li><small>Phone: +1(123)456 7890</small></li>
+                        <li><small>Fax: +1(123)456 7890</small></li>
+                        <li><small></small></li>
+                      </ul>
+          </div>
+          <div class="row">
+                      <h5>Address</h5>
+                      <ul>
+                        <li><small>Unit C2,St.Vincent´s Trading Est.,<a></a></small></li>
+                        <li><small>Fooder Road</small></li>
+                        <li><small>Bistrol,BS2 OUY</small></li>
+                        <li><small>United Kingdom</small></li>
+                      </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col l4 col s4">
+              <h5>Send and Message</h5>
+              <form method="POST" action="formulario-contacto.php" class="formulario">
+                <div class="input-field">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" name="nombre" required>
+                </div>
+                <div class="input-field">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" required>
+                </div>
+                <div class="input-field">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea name="mensaje" rows="10" length="140" required class="materialize-textarea"></textarea>
+                </div>
+                <div>
+                  <button id="boton-formulario" type="submit" class="center-align waves-effect waves-light btn">submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+  </body>
 </html>
